@@ -1,8 +1,9 @@
 package com.anteiku.androidmaster
-
+import android.app.AlertDialog
+import kotlin.math.PI
 
 fun main(){
-    ejercicio4()
+    ejercicio12()
 
 }
 
@@ -55,4 +56,58 @@ fun ejercicio4(){
 
     val name = readln().toString()
     println("Bienvenido $name")
+}
+fun ejercicio5(){
+   // Haz una aplicación que calcule el área de un círculo(pi*R2).
+// El radio se pedirá por teclado (recuerda pasar de String a double con Double.parseDouble).
+// Usa la constante PI y el método pow de Math.
+    println("Introduce el radio del circulo: ")
+    val r = readln().toDouble()
+    val area = Math.PI*Math.pow(r, 2.0)
+    println("El area del ciruclo es $area")
+}
+fun ejercicio6(){
+    //Lee un número por teclado e indica si es divisible entre 2 (resto = 0).
+// Si no lo es, también debemos indicarlo.
+    println("Introduzca un número, para ver si es divisible entre 2: ")
+    val num = readln().toInt()
+    val resto = num%2
+    if(resto == 0){
+        println("El numero $num es divisible entre 2")
+    }else println("No es divisible entre 2")
+}
+fun ejercicio9(){
+    //Lee un número por teclado que pida el precio de un producto (puede tener decimales) y calcule el precio final con IVA.
+// El IVA sera una constante que sera del 21%.
+    println("Introduzca el precio del producto ")
+    val price = readln().toFloat()
+    val iva = price*.21
+    val netPrice = price+iva
+    println("El precio final con el iva agregado es de: $netPrice")
+
+}
+fun ejercicio10(){
+    // Muestra los números del 1 al 100 (ambos incluidos).
+// Usa un bucle while.
+
+    var num = 0
+    while(num<=100){
+        println("El numero es $num")
+        num++
+    }
+}
+fun ejercicio11(){
+    var num = 0
+    for(i in 0 until 101){
+        println("El número es: $num")
+        num = num+1
+    }
+}
+fun ejercicio12(){
+    // Muestra los números del 1 al 100 (ambos incluidos) divisibles entre 2 y 3.
+    // Utiliza el bucle que desees.
+    for(i in 1 until 100){
+        if(i%2==0 || i%3 == 0)
+            println(i)
+    }
 }
